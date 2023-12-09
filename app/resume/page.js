@@ -17,7 +17,7 @@ export default function Resume() {
             className=" absolute h-[100%] w-[100%] hidden md:block rounded-[16px]"
           />
         </div>
-        <div className="absolute md:relative flex flex-col w-[95vw] h-[35vh] md:w-[50vw] md:h-[55vh] bg-[rgba(255, 255, 255, 0.2)] rounded-[16px] shadow-2xl backdrop-blur border-[1px] border-[rgba(255, 255, 255, 0.3)] ml-[0rem] md:ml-[-10rem] px-[1rem] md:px-[4rem]">
+        <div className="absolute md:relative flex flex-col w-[95vw] h-[45vh] md:w-[50vw] md:h-[55vh] bg-[rgba(255, 255, 255, 0.2)] rounded-[16px] shadow-2xl backdrop-blur border-[1px] border-[rgba(255, 255, 255, 0.3)] ml-[0rem] md:ml-[-10rem] px-[1rem] md:px-[4rem]">
           <h4 className=" text-[1.5rem] w-[90%] md:w-[90%] mt-[1rem] md:mt-[2.5rem] font-[600]">
             Create your professional{" "}
             <span className="text-[#FF5C00]">resume</span> in Just minutes
@@ -34,6 +34,7 @@ export default function Resume() {
           </Link>
         </div>
       </div>
+      <div className=" h-[30vh] md:h-[0vh]"></div>
       <Footer />
     </div>
   );
