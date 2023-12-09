@@ -24,6 +24,12 @@ export default function SideBar() {
             Personal Info
           </Link>
           <Link
+            href="/resume/education"
+            className=" bg-[#FF5C00] py-[0.5rem] px-[3rem] text-[white] text-center text-[0.9rem] font-[600] mb-[1rem]"
+          >
+            Education
+          </Link>
+          <Link
             href="/resume/experience"
             className=" bg-[#FF5C00] py-[0.5rem] px-[3rem] text-[white] text-center text-[0.9rem] font-[600] mb-[1rem]"
           >

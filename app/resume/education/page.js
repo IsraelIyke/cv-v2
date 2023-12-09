@@ -51,7 +51,7 @@ const EducationInfo = () => {
       <Nav />
       <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
-        <div className="w-[65vw] h-[80vh] shadow-xl ml-[1rem] rounded-[16px] px-[3rem] pt-[2rem]">
+        <div className="w-[95vw] md:w-[65vw] max-h-fit min-h-[70vh] ml-[0rem] md:ml-[1rem] rounded-[16px]  px-[0.5rem] md:px-[3rem] pt-[2rem]">
           <div>
             <h3 className="mb-[1rem] font-[600]">Education Information</h3>
           </div>
