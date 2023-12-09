@@ -49,7 +49,7 @@ const EducationInfo = () => {
   return (
     <div>
       <Nav />
-      <div className="relative flex py-[2rem] px-[10rem]">
+      <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
         <div className="w-[65vw] h-[80vh] shadow-xl ml-[1rem] rounded-[16px] px-[3rem] pt-[2rem]">
           <div>

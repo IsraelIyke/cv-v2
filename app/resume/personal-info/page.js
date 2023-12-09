@@ -48,19 +48,19 @@ export default function Info() {
   return (
     <div>
       <Nav />
-      <div className="relative flex py-[2rem] px-[10rem]">
+      <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
 
-        <div className="w-[65vw] h-[100vh] shadow-xl ml-[1rem] rounded-[16px] px-[3rem] pt-[2rem]">
+        <div className="w-[95vw] min-h-[100vh] max-h-fit md:w-[65vw] md:h-[100vh] shadow-xl ml-[0rem] md:ml-[1rem] rounded-[16px] px-[1rem] md:px-[3rem] pt-[2rem]">
           <div>
             <h3 className="mb-[1rem] font-[600]">Personal Information</h3>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col md:flex-row justify-between">
             <div className="flex flex-col">
               <label className="text-[0.9rem] font-[600]">First Name</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] rounded-[0.2rem] text-[0.9rem] mb-[1rem] md:mb-[0]"
                 placeholder="First Name"
                 value={firstName}
                 name="firstName"
@@ -70,7 +70,7 @@ export default function Info() {
             <div className="flex flex-col">
               <label className="text-[0.9rem] font-[600]">Last Name</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem]  rounded-[0.2rem] text-[0.9rem]"
                 placeholder="Last Name"
                 value={lastName}
                 name="lastName"
@@ -79,11 +79,11 @@ export default function Info() {
             </div>
           </div>
 
-          <div className="flex justify-between mt-[1.5rem]">
+          <div className="flex justify-between  flex-col md:flex-row  mt-[1.5rem]">
             <div className="flex flex-col">
               <label className="text-[0.9rem] font-[600]">Profession</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem]  w-[100%] md:w-[15rem]  mb-[1rem] md:mb-[0] rounded-[0.2rem] text-[0.9rem]"
                 placeholder="Profession"
                 value={profession}
                 name="profession"
@@ -93,7 +93,7 @@ export default function Info() {
             <div className="flex flex-col">
               <label className="text-[0.9rem] font-[600]">Address</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem]  rounded-[0.2rem] text-[0.9rem]"
                 placeholder="Address"
                 value={address}
                 name="address"
@@ -106,7 +106,7 @@ export default function Info() {
             <div className="flex flex-col">
               <label className="text-[0.9rem] font-[600]">City</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[10rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem]  w-[100%] md:w-[10rem]  rounded-[0.2rem] text-[0.9rem]"
                 placeholder="City"
                 value={city}
                 name="city"
@@ -116,7 +116,7 @@ export default function Info() {
             <div className="flex flex-col">
               <label className="text-[0.9rem] font-[600]">State</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[10rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem]  w-[100%] md:w-[10rem]  rounded-[0.2rem] text-[0.9rem]"
                 placeholder="State"
                 value={state}
                 name="state"
@@ -126,7 +126,7 @@ export default function Info() {
             <div className="flex flex-col">
               <label className="text-[0.9rem] font-[600]">Zip Code</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[10rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[10rem]  rounded-[0.2rem] text-[0.9rem]"
                 placeholder="Zip Code"
                 value={zipCode}
                 name="zipCode"
