@@ -43,7 +43,7 @@ const Skills = () => {
       <Nav />
       <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
-        <div className="w-[65vw] max-h-fit min-h-[70vh] shadow-xl ml-[1rem] rounded-[16px] px-[3rem] pt-[2rem]">
+        <div className="w-[95vw] md:w-[65vw] max-h-fit min-h-[70vh] shadow-xl ml-[0rem] md:ml-[1rem] rounded-[16px] px-[0.5rem] md:px-[3rem] pt-[2rem]">
           <div>
             <h3 className="mb-[1rem] font-[600]">Skills</h3>
           </div>
@@ -52,7 +52,7 @@ const Skills = () => {
             {skills.map((skill, index) => (
               <div key={index} className="mb-[1rem]">
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[10rem] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder={`Skill ${index + 1}`}
                   value={skill}

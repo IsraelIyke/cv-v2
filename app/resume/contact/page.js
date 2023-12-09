@@ -34,15 +34,15 @@ const ContactInfo = () => {
       <Nav />
       <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
-        <div className="w-[65vw] h-[75vh] shadow-xl ml-[1rem] rounded-[16px] px-[3rem] pt-[2rem]">
+        <div className="w-[95vw] md:w-[65vw] max-h-fit min-h-[70vh] ml-[0rem] md:ml-[1rem] rounded-[16px]  px-[0.5rem] md:px-[3rem] pt-[2rem]">
           <div>
             <h3 className="mb-[1rem] font-[600]">Contact Information</h3>
           </div>
-          <div className="flex justify-between">
+          <div className="flex  flex-col md:flex-row justify-between">
             <div className="flex flex-col mb-[1rem]">
               <label className="text-[0.9rem] font-[600]">Email Address</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                 type="text"
                 placeholder="Email Address"
                 value={email}
@@ -52,7 +52,7 @@ const ContactInfo = () => {
             <div className="flex flex-col mb-[1rem]">
               <label className="text-[0.9rem] font-[600]">Phone Number</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                 type="text"
                 placeholder="Phone Number"
                 value={phoneNumber}
@@ -60,13 +60,13 @@ const ContactInfo = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex  flex-col md:flex-row  justify-between">
             <div className="flex flex-col mb-[1rem]">
               <label className="text-[0.9rem] font-[600]">
                 LinkedIn Profile
               </label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                 type="text"
                 placeholder="LinkedIn Profile"
                 value={linkedin}
@@ -76,7 +76,7 @@ const ContactInfo = () => {
             <div className="flex flex-col mb-[1rem]">
               <label className="text-[0.9rem] font-[600]">Portfolio Link</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                 type="text"
                 placeholder="Portfolio Link"
                 value={portfolio}
@@ -84,11 +84,11 @@ const ContactInfo = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex  flex-col md:flex-row  justify-between">
             <div className="flex flex-col mb-[1rem]">
               <label className="text-[0.9rem] font-[600]">GitHub Profile</label>
               <input
-                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                 type="text"
                 placeholder="GitHub Profile"
                 value={github}
