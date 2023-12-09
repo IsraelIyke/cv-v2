@@ -56,7 +56,7 @@ const EducationInfo = () => {
             <h3 className="mb-[1rem] font-[600]">Education Information</h3>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col md:flex-row justify-between">
             <div className="flex flex-col">
               <h4 className="mb-[0.6rem]">
                 Education 1 <span className=" text-[red]">*</span>
@@ -64,7 +64,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Institution</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Institution"
                   value={institution1}
@@ -74,7 +74,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Course</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Course"
                   value={course1}
@@ -84,7 +84,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Start Date</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Start Date"
                   value={start1}
@@ -94,7 +94,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Finish Date</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Finish Date"
                   value={finish1}
@@ -107,7 +107,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Institution</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Institution"
                   value={institution2}
@@ -117,7 +117,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Course</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Course"
                   value={course2}
@@ -127,7 +127,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Start Date</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Start Date"
                   value={start2}
@@ -137,7 +137,7 @@ const EducationInfo = () => {
               <div className="flex flex-col">
                 <label className="text-[0.9rem] font-[600]">Finish Date</label>
                 <input
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
+                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[15rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
                   type="text"
                   placeholder="Finish Date"
                   value={finish2}
@@ -167,7 +167,7 @@ const EducationInfo = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

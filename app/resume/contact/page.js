@@ -116,7 +116,7 @@ const ContactInfo = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -166,7 +166,7 @@ export default function Info() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

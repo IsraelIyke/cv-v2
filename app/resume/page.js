@@ -34,8 +34,7 @@ export default function Resume() {
           </Link>
         </div>
       </div>
-      <div className=" h-[30vh] md:h-[0vh]"></div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
