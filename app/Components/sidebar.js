@@ -11,7 +11,7 @@ export default function SideBar() {
   return (
     <div>
       <CiMenuKebab
-        className="mb-[1rem] mt-[2rem] text-[1.5rem]"
+        className="mb-[1rem] mt-[2rem] text-[1.5rem] block md:hidden"
         onClick={handleClick}
       />
 
