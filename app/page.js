@@ -9,11 +9,11 @@ export default function Home() {
     <div>
       <Nav />
       <div className=" flex flex-col items-center">
-        <h2 className=" font-[700] text-[2rem] my-[2rem] w-[30vw] text-center">
+        <h2 className=" font-[700] text-[1.7rem] md:text-[2rem] my-[2rem] w-[90vw] md:w-[30vw] text-center">
           Create a <span className="text-[#FF5C00]">resume</span> that secures
           your <span className="text-[#FF5C00]">dream job</span>
         </h2>
-        <p className=" w-[40vw] text-center mb-[3rem]">
+        <p className=" w-[90vw] md:w-[40vw] text-center mb-[3rem]">
           Build a resume thats piques the interest of recruiters and gets you
           hired. It&lsquo;s fast and easy to use.
         </p>
@@ -25,12 +25,12 @@ export default function Home() {
         </Link>
       </div>
       <div>
-        <h3 className=" text-[1.6rem] font-[600] text-center mt-[4rem]">
+        <h3 className=" text-[1.4rem] md:text-[1.6rem] font-[600] text-center mt-[4rem]">
           Build your <span className=" text-[#FF5C00]">resume</span> in 3 steps
         </h3>
         {/* edit */}
-        <div className=" flex justify-between px-[20rem] mt-[3rem]">
-          <div className="relative w-[50vw] flex">
+        <div className=" flex justify-between px-[2rem] md:px-[20rem] mt-[3rem]">
+          <div className="relative w-[90vw] md:w-[50vw] flex">
             <Image
               src="/images/image2.png"
               alt="edit"
@@ -48,13 +48,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" w-[50vw]"></div>
+          <div className=" w-[0vw] md:w-[50vw]"></div>
         </div>
         {/* template */}
-        <div className=" flex justify-between px-[20rem] mt-[1rem]">
-          <div className=" w-[50vw]"></div>
+        <div className=" flex justify-between px-[2rem] md:px-[20rem] mt-[1rem]">
+          <div className=" w-[0vw] md:w-[50vw]"></div>
 
-          <div className="relative w-[50vw] flex">
+          <div className="relative w-[90vw] md:w-[50vw] flex">
             <Image
               src="/images/image1.png"
               alt="edit"
@@ -74,8 +74,8 @@ export default function Home() {
           </div>
         </div>
         {/* download */}
-        <div className=" flex justify-between px-[20rem] mt-[3rem]">
-          <div className="relative w-[50vw] flex">
+        <div className=" flex justify-between px-[2rem] md:px-[20rem] mt-[3rem]">
+          <div className="relative w-[90vw] md:w-[50vw] flex">
             <Image
               src="/images/image3.png"
               alt="edit"
@@ -93,9 +93,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className=" w-[50vw]"></div>
+          <div className=" w-[0vw] md:w-[50vw]"></div>
         </div>
       </div>
+      <br />
+      <br />
       <Footer />
     </div>
   );
