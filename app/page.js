@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Nav />
-      <div className=" flex flex-col items-center">
+      <div className=" pt-[6rem] flex flex-col items-center">
         <h2 className=" font-[700] text-[1.7rem] md:text-[2rem] my-[2rem] w-[90vw] md:w-[30vw] text-center">
           Create a <span className="text-[#FF5C00]">resume</span> that secures
           your <span className="text-[#FF5C00]">dream job</span>
@@ -34,8 +34,8 @@ export default function Home() {
             <Image
               src="/images/image2.png"
               alt="edit"
-              height={1000}
-              width={1000}
+              height={2000}
+              width={2000}
               className="  h-[10rem] w-[10rem]"
             />
             <div className=" flex items-center text-[#FF5C00]">
@@ -58,8 +58,8 @@ export default function Home() {
             <Image
               src="/images/image1.png"
               alt="edit"
-              height={1000}
-              width={1000}
+              height={2000}
+              width={2000}
               className="  h-[10rem] w-[10rem]"
             />
             <div className=" flex items-center text-[#FF5C00]">
@@ -79,8 +79,8 @@ export default function Home() {
             <Image
               src="/images/image3.png"
               alt="edit"
-              height={1000}
-              width={1000}
+              height={2000}
+              width={2000}
               className="  h-[10rem] w-[10rem]"
             />
             <div className=" flex items-center text-[#FF5C00]">
@@ -98,6 +98,27 @@ export default function Home() {
       </div>
       <br />
       <br />
+      <Image
+        src="/images/circle.png"
+        alt="."
+        height={200}
+        width={200}
+        className="absolute h-[5rem] w-[5rem] top-[70vh] left-[30vw] -z-10"
+      />
+      <Image
+        src="/images/Group.png"
+        alt="."
+        height={1000}
+        width={1000}
+        className="absolute h-[7rem] w-[5rem] top-[100vh] left-[10vw] -z-10"
+      />
+      <Image
+        src="/images/Polygon.png"
+        alt="."
+        height={200}
+        width={200}
+        className="absolute h-[5rem] w-[5rem] top-[150vh] left-[80vw] -z-10"
+      />
       <Footer />
     </div>
   );
