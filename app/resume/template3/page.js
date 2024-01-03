@@ -1,5 +1,4 @@
-import DownloadImageComponent from "@/app/Components/CanvasComponents";
-import Footer from "@/app/Components/footer";
+import DownloadImageComponent3 from "@/app/Components/CanvasComponents3";
 import Nav from "@/app/Components/nav";
 
 export default function Template() {
@@ -13,7 +12,7 @@ export default function Template() {
       <br />
       <br />
       <div className=" flex justify-center">
-        <DownloadImageComponent />
+        <DownloadImageComponent3 />
       </div>
 
       {/* <Footer /> */}

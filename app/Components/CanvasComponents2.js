@@ -4,7 +4,7 @@ import html2canvas from "html2canvas";
 import Nav from "./nav";
 import Link from "next/link";
 
-const DownloadImageComponent = () => {
+const DownloadImageComponent3 = () => {
   const divRef = useRef(null);
 
   const [personalInfo, setPersonalInfo] = useState({});
@@ -47,7 +47,9 @@ const DownloadImageComponent = () => {
 
   return (
     <div className=" flex items-center justify-evenly w-screen">
-      <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent border-l-[4rem] border-l-transparent border-t-[4rem]  border-t-transparent border-b-[4rem] border-b-transparent "></div>
+      <Link href="/resume/template">
+        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-orange-500 border-l-[4rem] border-l-transparent border-t-[4rem]  border-t-transparent border-b-[4rem] border-b-transparent "></div>
+      </Link>
 
       <div className=" flex flex-col justify-center">
         <button
@@ -216,7 +218,7 @@ const DownloadImageComponent = () => {
           </div>
         </div>
       </div>
-      <Link href="/resume/template2">
+      <Link href="/resume/template3">
         {" "}
         <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent    border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-orange-500"></div>
       </Link>
@@ -224,4 +226,4 @@ const DownloadImageComponent = () => {
   );
 };
 
-export default DownloadImageComponent;
+export default DownloadImageComponent3;
