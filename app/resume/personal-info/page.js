@@ -48,6 +48,9 @@ export default function Info() {
   return (
     <div>
       <Nav />
+      <br />
+      <br />
+      <br />
       <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
 
@@ -149,7 +152,7 @@ export default function Info() {
           <div className=" flex justify-between">
             <Link href="/resume">
               <button
-                className=" bg-[#FF5C00] py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mt-[2rem]"
+                className=" bg-[#FF5C00] hover:bg-orange-800 py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mt-[2rem]"
                 onClick={handleButtonClick}
               >
                 Prev
@@ -157,7 +160,7 @@ export default function Info() {
             </Link>
             <Link href="/resume/education">
               <button
-                className=" bg-[#FF5C00] py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mt-[2rem]"
+                className=" bg-[#FF5C00] hover:bg-orange-800 py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mt-[2rem]"
                 onClick={handleButtonClick}
               >
                 Next

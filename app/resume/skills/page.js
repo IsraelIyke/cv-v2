@@ -41,6 +41,9 @@ const Skills = () => {
   return (
     <div>
       <Nav />
+      <br />
+      <br />
+      <br />
       <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
         <div className="w-[95vw] md:w-[65vw] max-h-fit min-h-[70vh] shadow-xl ml-[0rem] md:ml-[1rem] rounded-[16px] px-[0.5rem] md:px-[3rem] pt-[2rem]">
@@ -65,7 +68,7 @@ const Skills = () => {
           <div className="flex justify-between">
             <Link href="/resume/contact">
               <button
-                className=" bg-[#FF5C00] py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mb-[1rem]"
+                className=" bg-[#FF5C00] hover:bg-orange-800 py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mb-[1rem]"
                 onClick={handleButtonClick}
               >
                 Prev
@@ -73,7 +76,7 @@ const Skills = () => {
             </Link>
             <Link href="/resume/template">
               <button
-                className=" bg-[#FF5C00] py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mb-[1rem]"
+                className=" bg-[#FF5C00] hover:bg-orange-800 py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mb-[1rem]"
                 onClick={handleButtonClick}
               >
                 Next

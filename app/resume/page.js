@@ -7,7 +7,7 @@ export default function Resume() {
   return (
     <div>
       <Nav />
-      <div className=" pt-[8rem] relative flex py-[4rem] px-[1rem] md:px-[9rem] items-center justify-center">
+      <div className="  pt-[8rem] relative flex py-[4rem] px-[1rem] md:px-[9rem] items-center justify-center">
         <div className="relative w-[80vw] md:w-[50vw] h-[30vh] md:h-[70vh]">
           <Image
             src="/images/resume.png"
@@ -34,7 +34,7 @@ export default function Resume() {
           </Link>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
