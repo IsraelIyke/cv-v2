@@ -44,12 +44,6 @@ const DownloadImageComponent2 = () => {
     });
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    setSelectedImage(file);
-  };
   return (
     <div className=" flex items-center justify-evenly w-screen">
       <Link href="/resume/template">
