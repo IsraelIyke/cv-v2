@@ -129,7 +129,7 @@ const DownloadImageComponent = () => {
             </div>
             {/* right */}
             <div className="w-[60%] h-[100%]  pl-[2.5rem] pr-[0.9rem] mt-[13rem] ">
-              <p className="text-[1.8rem] font-[600] uppercase">
+              {/* <p className="text-[1.8rem] font-[600] uppercase">
                 {personalInfo.lastName}{" "}
                 <span className="text-[orange] uppercase">
                   {personalInfo.firstName}
@@ -169,8 +169,8 @@ const DownloadImageComponent = () => {
                 </>
               ) : (
                 ""
-              )}
-              {/* {experienceInfo[1] != undefined &&
+              )} */}
+              {experienceInfo[1] != undefined &&
               experienceInfo[1].role.length > 0 ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
@@ -192,7 +192,7 @@ const DownloadImageComponent = () => {
                 </>
               ) : (
                 ""
-              )} */}
+              )}
               {experienceInfo[2] != undefined &&
               experienceInfo[2].role.length > 0 ? (
                 <>
