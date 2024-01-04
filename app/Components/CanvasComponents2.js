@@ -87,111 +87,116 @@ const DownloadImageComponent2 = () => {
                   {personalInfo.profession}
                 </p>
               </div>
-              <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
-                About Me
-              </p>
-              <p className="text-[0.66rem] font-[400] mt-[0.5rem]">
-                {personalInfo.about}
-              </p>
-              <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
-                PROJECTS/JOB EXPERIENCE
-              </p>
-              {experienceInfo[0] != undefined &&
-              experienceInfo[0].role.length > 0 ? (
-                <>
-                  <p className="uppercase mt-[0.2rem] flex justify-between items-end">
-                    <p className="text-[0.7rem] font-[600]">
-                      <p>{experienceInfo[0].role}</p>
+              <div className=" ml-[2rem] w-[16rem] flex flex-col">
+                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
+                  Who I am
+                </p>
+                <p className="text-[0.66rem] font-[400] mt-[0.5rem]">
+                  {personalInfo.about}
+                </p>
+                <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
+                  Work history
+                </p>
+                {experienceInfo[0] != undefined &&
+                experienceInfo[0].role.length > 0 ? (
+                  <>
+                    <p className="uppercase mt-[0.2rem] flex justify-between items-end">
+                      <p className="text-[0.7rem] font-[600]">
+                        <p>{experienceInfo[0].role}</p>
+                      </p>
+                      <p className="text-[0.6rem] ">
+                        {" "}
+                        {experienceInfo[0].start} - {experienceInfo[0].finish}
+                      </p>
                     </p>
-                    <p className="text-[0.6rem] ">
+                    <p className="text-[0.6rem] text-[gray]">
                       {" "}
-                      {experienceInfo[0].start} - {experienceInfo[0].finish}
+                      {experienceInfo[0].companyName}/
+                      {experienceInfo[0].location}
                     </p>
-                  </p>
-                  <p className="text-[0.6rem] text-[gray]">
-                    {" "}
-                    {experienceInfo[0].companyName}/{experienceInfo[0].location}
-                  </p>
-                  <p className="text-[0.6rem] mb-[0.4rem]">
-                    {experienceInfo[0].achievements}
-                  </p>
-                </>
-              ) : (
-                ""
-              )}
-              {experienceInfo[1] != undefined &&
-              experienceInfo[1].role.length > 0 ? (
-                <>
-                  <p className="uppercase mt-[0.2rem] flex justify-between items-end">
-                    <p className="text-[0.7rem] font-[600]">
-                      <p>{experienceInfo[1].role}</p>
+                    <p className="text-[0.6rem] mb-[0.4rem]">
+                      {experienceInfo[0].achievements}
                     </p>
-                    <p className="text-[0.6rem] ">
+                  </>
+                ) : (
+                  ""
+                )}
+                {experienceInfo[1] != undefined &&
+                experienceInfo[1].role.length > 0 ? (
+                  <>
+                    <p className="uppercase mt-[0.2rem] flex justify-between items-end">
+                      <p className="text-[0.7rem] font-[600]">
+                        <p>{experienceInfo[1].role}</p>
+                      </p>
+                      <p className="text-[0.6rem] ">
+                        {" "}
+                        {experienceInfo[1].start} - {experienceInfo[1].finish}
+                      </p>
+                    </p>
+                    <p className="text-[0.6rem] text-[gray]">
                       {" "}
-                      {experienceInfo[1].start} - {experienceInfo[1].finish}
+                      {experienceInfo[1].companyName}/
+                      {experienceInfo[1].location}
                     </p>
-                  </p>
-                  <p className="text-[0.6rem] text-[gray]">
-                    {" "}
-                    {experienceInfo[1].companyName}/{experienceInfo[1].location}
-                  </p>
-                  <p className="text-[0.6rem] mb-[0.4rem]">
-                    {experienceInfo[1].achievements}
-                  </p>
-                </>
-              ) : (
-                ""
-              )}
-              {experienceInfo[2] != undefined &&
-              experienceInfo[2].role.length > 0 ? (
-                <>
-                  <p className="uppercase mt-[0.2rem] flex justify-between items-end">
-                    <p className="text-[0.7rem] font-[600]">
-                      <p>{experienceInfo[2].role}</p>
+                    <p className="text-[0.6rem] mb-[0.4rem]">
+                      {experienceInfo[1].achievements}
                     </p>
-                    <p className="text-[0.6rem] ">
+                  </>
+                ) : (
+                  ""
+                )}
+                {experienceInfo[2] != undefined &&
+                experienceInfo[2].role.length > 0 ? (
+                  <>
+                    <p className="uppercase mt-[0.2rem] flex justify-between items-end">
+                      <p className="text-[0.7rem] font-[600]">
+                        <p>{experienceInfo[2].role}</p>
+                      </p>
+                      <p className="text-[0.6rem] ">
+                        {" "}
+                        {experienceInfo[2].start} - {experienceInfo[2].finish}
+                      </p>
+                    </p>
+                    <p className="text-[0.6rem] text-[gray]">
                       {" "}
-                      {experienceInfo[2].start} - {experienceInfo[2].finish}
+                      {experienceInfo[2].companyName}/
+                      {experienceInfo[2].location}
                     </p>
-                  </p>
-                  <p className="text-[0.6rem] text-[gray]">
-                    {" "}
-                    {experienceInfo[2].companyName}/{experienceInfo[2].location}
-                  </p>
-                  <p className="text-[0.6rem] mb-[0.4rem]">
-                    {experienceInfo[2].achievements}
-                  </p>
-                </>
-              ) : (
-                ""
-              )}
-              <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
-                Skills
-              </p>
-              <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
-                <p> {skills[0]}</p>
-                <p> {skills[1]}</p>
-                <p> {skills[2]}</p>
-                <p> {skills[3]}</p>
-                <p> {skills[4]}</p>
-                <p> {skills[5]}</p>
-                <p> {skills[6]}</p>
-                <p> {skills[7]}</p>
-                <p> {skills[8]}</p>
-                <p> {skills[9]}</p>
+                    <p className="text-[0.6rem] mb-[0.4rem]">
+                      {experienceInfo[2].achievements}
+                    </p>
+                  </>
+                ) : (
+                  ""
+                )}
+                <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
+                  Skills
+                </p>
+                <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
+                  <p> {skills[0]}</p>
+                  <p> {skills[1]}</p>
+                  <p> {skills[2]}</p>
+                  <p> {skills[3]}</p>
+                  <p> {skills[4]}</p>
+                  <p> {skills[5]}</p>
+                  <p> {skills[6]}</p>
+                  <p> {skills[7]}</p>
+                  <p> {skills[8]}</p>
+                  <p> {skills[9]}</p>
+                </div>
               </div>
             </div>
 
             {/* left */}
-            <div className="w-[40%] h-[100%] pl-[2.2rem] pr-[0.9rem] text-[white]">
+            <div className="w-[50%] h-[100%] pl-[2.2rem] pr-[0.9rem] text-[black]">
               <div className="text-[0.6rem] font-[700]">
-                <p className="text-[0.9rem] font-[800] uppercase mt-[6rem]">
+                <p className="text-[0.9rem] font-[800] uppercase mt-[3rem] mb-[1rem]">
                   CONTACT ME
                 </p>
                 <p className=" mb-[0.2rem]">Phone: {contactInfo.phoneNumber}</p>
                 <p className=" mb-[0.2rem]">Email: {contactInfo.email}</p>
                 <p className=" mb-[0.2rem]">Address: {personalInfo.address}</p>
-                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
+                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem] mb-[1rem]">
                   PROFILE
                 </p>
                 <p className=" mb-[0.2rem]">
@@ -199,7 +204,7 @@ const DownloadImageComponent2 = () => {
                 </p>
                 <p className=" mb-[0.2rem]">Linkedin: {contactInfo.linkedin}</p>
                 <p className=" mb-[0.2rem]">Github: {contactInfo.github}</p>
-                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
+                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem] mb-[1rem]">
                   EDUCATION
                 </p>
                 <p className=" ">{educationInfo.institution1}</p>
@@ -214,7 +219,7 @@ const DownloadImageComponent2 = () => {
                   {educationInfo.start2} - {educationInfo.finish2}
                 </p>
 
-                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
+                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]  mb-[1rem]">
                   LANGUAGE
                 </p>
                 <p className="mt-[0.3rem] mb-[0.2rem]">IGBO</p>
