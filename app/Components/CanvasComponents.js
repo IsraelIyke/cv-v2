@@ -193,7 +193,7 @@ const DownloadImageComponent = () => {
               ) : (
                 ""
               )}
-              {experienceInfo[2] != undefined &&
+              {/* {experienceInfo[2] != undefined &&
               experienceInfo[2].role.length > 0 ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
@@ -215,11 +215,11 @@ const DownloadImageComponent = () => {
                 </>
               ) : (
                 ""
-              )}
+              )} */}
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 Skills
               </p>
-              {/* <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
+              <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
                 <p> {skills[0]}</p>
                 <p> {skills[1]}</p>
                 <p> {skills[2]}</p>
@@ -230,7 +230,7 @@ const DownloadImageComponent = () => {
                 <p> {skills[7]}</p>
                 <p> {skills[8]}</p>
                 <p> {skills[9]}</p>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
