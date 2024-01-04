@@ -128,7 +128,7 @@ const DownloadImageComponent = () => {
               </div>
             </div>
             {/* right */}
-            {/* <div className="w-[60%] h-[100%]  pl-[2.5rem] pr-[0.9rem] mt-[13rem] ">
+            <div className="w-[60%] h-[100%]  pl-[2.5rem] pr-[0.9rem] mt-[13rem] ">
               <p className="text-[1.8rem] font-[600] uppercase">
                 {personalInfo.lastName}{" "}
                 <span className="text-[orange] uppercase">
@@ -219,7 +219,7 @@ const DownloadImageComponent = () => {
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 Skills
               </p>
-              <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
+              {/* <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
                 <p> {skills[0]}</p>
                 <p> {skills[1]}</p>
                 <p> {skills[2]}</p>
@@ -230,8 +230,8 @@ const DownloadImageComponent = () => {
                 <p> {skills[7]}</p>
                 <p> {skills[8]}</p>
                 <p> {skills[9]}</p>
-              </div>
-            </div> */}
+              </div> */}
+            </div>
           </div>
         </div>
       </div>
