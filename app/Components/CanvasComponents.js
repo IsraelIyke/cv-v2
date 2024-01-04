@@ -147,23 +147,24 @@ const DownloadImageComponent = () => {
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 PROJECTS/JOB EXPERIENCE
               </p>
-              {experienceInfo[0] != undefined ? (
+              {experienceInfo[0] != undefined &&
+              experienceInfo[0].role.length > 0 ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
                     <p className="text-[0.7rem] font-[600]">
-                      <p>{experienceInfo[0].role}</p>
+                      {/* <p>{experienceInfo[0].role}</p> */}
                     </p>
                     <p className="text-[0.6rem] ">
                       {" "}
-                      {experienceInfo[0].start} - {experienceInfo[0].finish}
+                      {/* {experienceInfo[0].start} - {experienceInfo[0].finish} */}
                     </p>
                   </p>
                   <p className="text-[0.6rem] text-[gray]">
                     {" "}
-                    {experienceInfo[0].companyName}/{experienceInfo[0].location}
+                    {/* {experienceInfo[0].companyName}/{experienceInfo[0].location} */}
                   </p>
                   <p className="text-[0.6rem] mb-[0.4rem]">
-                    {experienceInfo[0].achievements}
+                    {/* {experienceInfo[0].achievements} */}
                   </p>
                 </>
               ) : (
