@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas";
-import Nav from "./nav";
 import Link from "next/link";
+import Upload from "./Upload";
+import Image from "next/image";
 
 const DownloadImageComponent = () => {
   const divRef = useRef(null);
@@ -45,6 +46,12 @@ const DownloadImageComponent = () => {
     });
   };
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedImage(file);
+  };
   return (
     <div className=" flex items-center justify-evenly w-screen">
       <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent border-l-[4rem] border-l-transparent border-t-[4rem]  border-t-transparent border-b-[4rem] border-b-transparent "></div>
@@ -56,6 +63,9 @@ const DownloadImageComponent = () => {
         >
           Download Resume
         </button>
+
+        <h1>Upload Passport Image</h1>
+        <input type="file" onChange={handleImageChange} />
         <div ref={divRef} className=" relative  w-[595px] h-[842px]">
           <img
             src="/Template/Template2.png"
@@ -66,8 +76,19 @@ const DownloadImageComponent = () => {
           <div className="relative w-[100%] h-[100%] flex items-center py-[1.7rem]">
             {/* left */}
             <div className="w-[40%] h-[100%] pl-[2.2rem] pr-[0.9rem] text-[white]">
-              <div className=" bg-[white] w-[10rem] h-[10rem]"></div>
-
+              <div className="w-[10rem] h-[10rem]">
+                {selectedImage && (
+                  <div>
+                    <Image
+                      src={URL.createObjectURL(selectedImage)}
+                      alt="Preview"
+                      height={1000}
+                      width={1000}
+                      className=" h-[10rem] w-[10rem] border rounded-[10rem] object-cover"
+                    />
+                  </div>
+                )}
+              </div>
               <div className="text-[0.6rem] font-[700]">
                 <p className="text-[0.9rem] font-[800] uppercase mt-[6rem]">
                   CONTACT ME
