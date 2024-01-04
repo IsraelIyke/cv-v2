@@ -239,7 +239,7 @@ const DownloadImageComponent3 = () => {
       </div>
       <Link href="/resume/template2">
         {" "}
-        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent    border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-orange-500"></div>
+        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-orange-500"></div>
       </Link>
     </div>
   );

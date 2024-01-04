@@ -227,7 +227,7 @@ const DownloadImageComponent2 = () => {
       </div>
       <Link href="/resume/template3">
         {" "}
-        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent    border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-green-500"></div>
+        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent    border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-transparent"></div>
       </Link>
     </div>
   );
