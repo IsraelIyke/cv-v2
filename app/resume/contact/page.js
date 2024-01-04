@@ -32,9 +32,7 @@ const ContactInfo = () => {
   return (
     <div>
       <Nav />
-      <br />
-      <br />
-      <br />
+      <div className=" pt-[6rem]"></div>
       <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
         <SideBar />
         <div className="w-[95vw] md:w-[65vw] max-h-fit min-h-[70vh] ml-[0rem] md:ml-[1rem] rounded-[16px]  px-[0.5rem] md:px-[3rem] pt-[2rem]">

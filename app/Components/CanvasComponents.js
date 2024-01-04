@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+// Import necessary modules and components
+import React, { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,6 +13,7 @@ const DownloadImageComponent = () => {
   const [experienceInfo, setExperienceInfo] = useState({});
   const [contactInfo, setContactInfo] = useState({});
   const [skills, setSkills] = useState([]);
+  const [languages, setLanguages] = useState([]);
 
   useEffect(() => {
     // Fetch data from localStorage for each section on component mount
@@ -33,8 +35,11 @@ const DownloadImageComponent = () => {
 
     const storedSkills = JSON.parse(localStorage.getItem("skills")) || [];
     setSkills(storedSkills.skills);
+
+    const storedLanguages = JSON.parse(localStorage.getItem("languages")) || {};
+    setLanguages(storedLanguages.languages || []);
   }, []);
-  // console.log(experienceInfo[0].companyName);
+
   const handleDownload = () => {
     html2canvas(divRef.current).then((canvas) => {
       const dataUrl = canvas.toDataURL();
@@ -51,26 +56,27 @@ const DownloadImageComponent = () => {
     const file = event.target.files[0];
     setSelectedImage(file);
   };
-  return (
-    <div className=" flex items-center justify-evenly w-screen">
-      <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent border-l-[4rem] border-l-transparent border-t-[4rem]  border-t-transparent border-b-[4rem] border-b-transparent "></div>
 
-      <div className=" flex flex-col justify-center">
+  return (
+    <div className="flex items-center justify-evenly w-screen">
+      <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem] border-r-transparent border-l-[4rem] border-l-transparent border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent "></div>
+
+      <div className="flex flex-col justify-center">
         <button
           onClick={handleDownload}
-          className=" bg-orange-500 py-[0.6rem] mb-[1rem] text-[white] font-[600]"
+          className="bg-orange-500 py-[0.6rem] mb-[1rem] text-[white] font-[600]"
         >
           Download Resume
         </button>
 
         <h1>Upload Passport Image</h1>
         <input type="file" onChange={handleImageChange} />
-        <div ref={divRef} className=" relative  w-[595px] h-[842px]">
+        <div ref={divRef} className="relative w-[595px] h-[842px]">
           <img
             src="/Template/Template2.png"
             width={1000}
             height={1000}
-            className=" absolute w-[100%] h-[100%] -z-10"
+            className="absolute w-[100%] h-[100%] -z-10"
           />
           <div className="relative w-[100%] h-[100%] flex items-center py-[1.7rem]">
             {/* left */}
@@ -83,7 +89,7 @@ const DownloadImageComponent = () => {
                       alt="Preview"
                       height={1000}
                       width={1000}
-                      className=" h-[10rem] w-[10rem] border rounded-[10rem] object-cover"
+                      className="h-[10rem] w-[10rem] border rounded-[10rem] object-cover"
                     />
                   </div>
                 )}
@@ -92,28 +98,28 @@ const DownloadImageComponent = () => {
                 <p className="text-[0.9rem] font-[800] uppercase mt-[6rem]">
                   CONTACT ME
                 </p>
-                <p className=" mb-[0.2rem]">Phone: {contactInfo.phoneNumber}</p>
-                <p className=" mb-[0.2rem]">Email: {contactInfo.email}</p>
-                <p className=" mb-[0.2rem]">Address: {personalInfo.address}</p>
+                <p className="mb-[0.2rem]">Phone: {contactInfo.phoneNumber}</p>
+                <p className="mb-[0.2rem]">Email: {contactInfo.email}</p>
+                <p className="mb-[0.2rem]">Address: {personalInfo.address}</p>
                 <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
                   PROFILE
                 </p>
-                <p className=" mb-[0.2rem]">
+                <p className="mb-[0.2rem]">
                   Portfolio: {contactInfo.portfolio}
                 </p>
-                <p className=" mb-[0.2rem]">Linkedin: {contactInfo.linkedin}</p>
-                <p className=" mb-[0.2rem]">Github: {contactInfo.github}</p>
+                <p className="mb-[0.2rem]">Linkedin: {contactInfo.linkedin}</p>
+                <p className="mb-[0.2rem]">Github: {contactInfo.github}</p>
                 <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
                   EDUCATION
                 </p>
-                <p className=" ">{educationInfo.institution1}</p>
-                <p className=" text-[0.5rem]">{educationInfo.course1}</p>
+                <p>{educationInfo.institution1}</p>
+                <p className="text-[0.5rem]">{educationInfo.course1}</p>
                 <p className="text-[0.5rem] mb-[0.4rem]">
                   {educationInfo.start1} - {educationInfo.finish1}
                 </p>
 
-                <p className="mt-[1rem] ">{educationInfo.institution2}</p>
-                <p className=" text-[0.5rem]">{educationInfo.course2}</p>
+                <p className="mt-[1rem]">{educationInfo.institution2}</p>
+                <p className="text-[0.5rem]">{educationInfo.course2}</p>
                 <p className="text-[0.5rem] mb-[0.4rem]">
                   {educationInfo.start2} - {educationInfo.finish2}
                 </p>
@@ -121,15 +127,15 @@ const DownloadImageComponent = () => {
                 <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]">
                   LANGUAGE
                 </p>
-                <p className="mt-[0.3rem] mb-[0.2rem]">IGBO</p>
-                <p className="mb-[0.2rem]">HAUSA</p>
-                <p className="mb-[0.2rem]">YORUBA</p>
-                <p className="mb-[0.2rem]">ENGLISH</p>
-                <p className="mb-[0.2rem]">FRENCH</p>
+                <div className="mt-[0.3rem] mb-[0.2rem]">
+                  {languages.map((language, index) => (
+                    <p key={index}>{language}</p>
+                  ))}
+                </div>
               </div>
             </div>
             {/* right */}
-            <div className="w-[60%] h-[100%]  pl-[2.5rem] pr-[0.9rem] mt-[13rem] ">
+            <div className="w-[60%] h-[100%] pl-[2.5rem] pr-[0.9rem] mt-[13rem] ">
               <p className="text-[1.8rem] font-[600] uppercase">
                 {personalInfo.lastName}{" "}
                 <span className="text-[orange] uppercase">
@@ -220,25 +226,17 @@ const DownloadImageComponent = () => {
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 Skills
               </p>
-              <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
-                <p> {skills[0]}</p>
-                <p> {skills[1]}</p>
-                <p> {skills[2]}</p>
-                <p> {skills[3]}</p>
-                <p> {skills[4]}</p>
-                <p> {skills[5]}</p>
-                <p> {skills[6]}</p>
-                <p> {skills[7]}</p>
-                <p> {skills[8]}</p>
-                <p> {skills[9]}</p>
+              <div className="grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
+                {skills.map((skill, index) => (
+                  <p key={index}>{skill}</p>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
       <Link href="/resume/template2">
-        {" "}
-        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent    border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-orange-500"></div>
+        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem] border-r-transparent    border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-orange-500"></div>
       </Link>
     </div>
   );

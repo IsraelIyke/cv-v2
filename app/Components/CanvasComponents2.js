@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+// Import necessary modules and components
+import React, { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas";
 import Link from "next/link";
 
@@ -11,6 +12,7 @@ const DownloadImageComponent2 = () => {
   const [experienceInfo, setExperienceInfo] = useState({});
   const [contactInfo, setContactInfo] = useState({});
   const [skills, setSkills] = useState([]);
+  const [languages, setLanguages] = useState([]);
 
   useEffect(() => {
     // Fetch data from localStorage for each section on component mount
@@ -32,8 +34,12 @@ const DownloadImageComponent2 = () => {
 
     const storedSkills = JSON.parse(localStorage.getItem("skills")) || [];
     setSkills(storedSkills.skills);
+
+    // Fetch language data from localStorage
+    const storedLanguages = JSON.parse(localStorage.getItem("languages")) || {};
+    setLanguages(storedLanguages.languages || []);
   }, []);
-  // console.log(experienceInfo[0].companyName);
+
   const handleDownload = () => {
     html2canvas(divRef.current).then((canvas) => {
       const dataUrl = canvas.toDataURL();
@@ -45,20 +51,20 @@ const DownloadImageComponent2 = () => {
   };
 
   return (
-    <div className=" flex items-center justify-evenly w-screen">
+    <div className="flex items-center justify-evenly w-screen">
       <Link href="/resume/template">
         <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-green-500 border-l-[4rem] border-l-transparent border-t-[4rem]  border-t-transparent border-b-[4rem] border-b-transparent "></div>
       </Link>
 
-      <div className=" flex flex-col justify-center">
+      <div className="flex flex-col justify-center">
         <button
           onClick={handleDownload}
-          className=" bg-green-500 py-[0.6rem] mb-[1rem] text-[white] font-[600]"
+          className="bg-green-500 py-[0.6rem] mb-[1rem] text-[white] font-[600]"
         >
           Download Resume
         </button>
 
-        <div ref={divRef} className=" relative  w-[595px] h-[842px]">
+        <div ref={divRef} className="relative w-[595px] h-[842px]">
           <img
             src="/Template/template3d.png"
             width={1000}
@@ -163,7 +169,6 @@ const DownloadImageComponent2 = () => {
                 )}
               </div>
             </div>
-
             {/* left */}
             <div className="w-[50%] h-[100%] pl-[2.2rem] pr-[0.9rem] text-[black]">
               <div className="text-[0.6rem] font-[700]">
@@ -196,15 +201,14 @@ const DownloadImageComponent2 = () => {
                   {educationInfo.start2} - {educationInfo.finish2}
                 </p>
 
-                <p className="text-[0.9rem] font-[800] uppercase mt-[1rem]  mb-[1rem]">
+                <div className="text-[0.9rem] font-[800] uppercase mt-[1rem] mb-[1rem]">
                   LANGUAGE
-                </p>
-                <p className="mt-[0.3rem] mb-[0.2rem]">IGBO</p>
-                <p className="mb-[0.2rem]">HAUSA</p>
-                <p className="mb-[0.2rem]">YORUBA</p>
-                <p className="mb-[0.2rem]">ENGLISH</p>
-                <p className="mb-[0.2rem]">FRENCH</p>
-
+                </div>
+                <div className="mt-[0.3rem] mb-[0.2rem]">
+                  {languages.map((language, index) => (
+                    <p key={index}>{language}</p>
+                  ))}
+                </div>
                 <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                   Skills
                 </p>
@@ -225,9 +229,9 @@ const DownloadImageComponent2 = () => {
           </div>
         </div>
       </div>
+
       <Link href="/resume/template3">
-        {" "}
-        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent    border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-transparent"></div>
+        <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent border-t-[4rem] border-t-transparent border-b-[4rem] border-b-transparent border-l-[4rem]  border-l-transparent"></div>
       </Link>
     </div>
   );

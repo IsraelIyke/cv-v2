@@ -45,7 +45,7 @@ export default function SideBar() {
             href="/resume/skills"
             className=" bg-[#FF5C00] hover:bg-orange-900 py-[0.5rem] px-[3rem] text-[white] text-center text-[0.9rem] font-[600] mb-[1rem]"
           >
-            Skill
+            Skill & Language
           </Link>
           <Link
             href="/resume/template"
@@ -88,7 +88,7 @@ export default function SideBar() {
               href="/resume/skills"
               className=" bg-[#FF5C00] hover:bg-orange-900 py-[0.5rem] px-[3rem] text-[white] text-center text-[0.9rem] font-[600] mb-[1rem]"
             >
-              Skill
+              Skill & Language
             </Link>
             <Link
               href="/resume/template"
