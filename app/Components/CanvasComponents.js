@@ -13,6 +13,7 @@ const DownloadImageComponent = () => {
   const [contactInfo, setContactInfo] = useState({});
   const [skills, setSkills] = useState([]);
 
+  let a = false;
   useEffect(() => {
     // Fetch data from localStorage for each section on component mount
     const storedPersonalInfo =
@@ -147,8 +148,7 @@ const DownloadImageComponent = () => {
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 PROJECTS/JOB EXPERIENCE
               </p>
-              {experienceInfo[0] != undefined &&
-              experienceInfo[0].role.length > 0 ? (
+              {a ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
                     <p className="text-[0.7rem] font-[600]">
