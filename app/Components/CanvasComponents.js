@@ -128,8 +128,8 @@ const DownloadImageComponent = () => {
               </div>
             </div>
             {/* right */}
-            <div className="w-[60%] h-[100%]  pl-[2.5rem] pr-[0.9rem] mt-[13rem] ">
-              {/* <p className="text-[1.8rem] font-[600] uppercase">
+            {/* <div className="w-[60%] h-[100%]  pl-[2.5rem] pr-[0.9rem] mt-[13rem] ">
+              <p className="text-[1.8rem] font-[600] uppercase">
                 {personalInfo.lastName}{" "}
                 <span className="text-[orange] uppercase">
                   {personalInfo.firstName}
@@ -169,7 +169,7 @@ const DownloadImageComponent = () => {
                 </>
               ) : (
                 ""
-              )} */}
+              )}
               {experienceInfo[1] != undefined &&
               experienceInfo[1].role.length > 0 ? (
                 <>
@@ -231,7 +231,7 @@ const DownloadImageComponent = () => {
                 <p> {skills[8]}</p>
                 <p> {skills[9]}</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
