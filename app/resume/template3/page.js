@@ -5,17 +5,10 @@ export default function Template() {
   return (
     <div>
       <Nav />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className=" pt-[9rem]"></div>
       <div className=" flex justify-center">
         <DownloadImageComponent3 />
       </div>
-
-      {/* <Footer /> */}
     </div>
   );
 }
