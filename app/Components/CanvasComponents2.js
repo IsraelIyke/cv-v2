@@ -2,8 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas";
 import Link from "next/link";
-import Upload from "./Upload";
-import Image from "next/image";
 
 const DownloadImageComponent2 = () => {
   const divRef = useRef(null);
@@ -216,7 +214,7 @@ const DownloadImageComponent2 = () => {
                 <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                   Skills
                 </p>
-                <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
+                <div className=" grid grid-cols-1 text-[0.56rem] uppercase mt-[0.4rem]">
                   <p> {skills[0]}</p>
                   <p> {skills[1]}</p>
                   <p> {skills[2]}</p>

@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas";
 import Link from "next/link";
-import Upload from "./Upload";
 import Image from "next/image";
 
 const DownloadImageComponent = () => {
@@ -44,13 +43,6 @@ const DownloadImageComponent = () => {
       a.download = "div_image.png";
       a.click();
     });
-  };
-
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    setSelectedImage(file);
   };
   return (
     <div className=" flex items-center justify-evenly w-screen">
