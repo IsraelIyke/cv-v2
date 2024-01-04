@@ -13,7 +13,9 @@ const DownloadImageComponent = () => {
   const [contactInfo, setContactInfo] = useState({});
   const [skills, setSkills] = useState([]);
 
-  let a = false;
+  let a = 0;
+  let b = 0;
+
   useEffect(() => {
     // Fetch data from localStorage for each section on component mount
     const storedPersonalInfo =
@@ -51,6 +53,14 @@ const DownloadImageComponent = () => {
     const file = event.target.files[0];
     setSelectedImage(file);
   };
+  if (experienceInfo[0] != undefined) {
+    a = experienceInfo[0].role.length;
+    b = experienceInfo[0];
+  } else {
+    a = 0;
+    b = 0;
+  }
+
   return (
     <div className=" flex items-center justify-evenly w-screen">
       <div className="mt-[-8rem] h-[8rem] w-[5rem] border-r-[4rem]  border-r-transparent border-l-[4rem] border-l-transparent border-t-[4rem]  border-t-transparent border-b-[4rem] border-b-transparent "></div>
@@ -148,24 +158,22 @@ const DownloadImageComponent = () => {
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 PROJECTS/JOB EXPERIENCE
               </p>
-              {a ? (
+              {a != undefined && b > 0 ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
                     <p className="text-[0.7rem] font-[600]">
-                      {/* <p>{experienceInfo[0].role}</p> */}
+                      <p>{b.role}</p>
                     </p>
                     <p className="text-[0.6rem] ">
                       {" "}
-                      {/* {experienceInfo[0].start} - {experienceInfo[0].finish} */}
+                      {b.start} - {b.finish}
                     </p>
                   </p>
                   <p className="text-[0.6rem] text-[gray]">
                     {" "}
-                    {/* {experienceInfo[0].companyName}/{experienceInfo[0].location} */}
+                    {b.companyName}/{b.location}
                   </p>
-                  <p className="text-[0.6rem] mb-[0.4rem]">
-                    {/* {experienceInfo[0].achievements} */}
-                  </p>
+                  <p className="text-[0.6rem] mb-[0.4rem]">{b.achievements}</p>
                 </>
               ) : (
                 ""
