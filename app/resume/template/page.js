@@ -6,7 +6,7 @@ export default function Template() {
     <div className="">
       <Nav />
       <div className=" pt-[9rem]"></div>
-      <div className=" ml-0 md:ml-[10rem] flex justify-center">
+      <div className=" pl-0 md:pl-[10rem] flex justify-center">
         <DownloadImageComponent />
       </div>
     </div>
