@@ -68,7 +68,7 @@ const DownloadImageComponent2 = () => {
 
         <div ref={divRef} className=" relative  w-[595px] h-[842px]">
           <img
-            src="/Template/Template3d.png"
+            src="/Template/template3d.png"
             width={1000}
             height={1000}
             className=" absolute w-[100%] h-[100%] -z-10"
