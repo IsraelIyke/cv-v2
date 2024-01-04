@@ -11,7 +11,7 @@ export default function Template() {
       <Nav />
       <div className=" pt-[9rem]"></div>
       <div className=" flex justify-center">
-        {/* <DownloadImageComponent /> */}
+        <DownloadImageComponent />
       </div>
     </div>
   );
