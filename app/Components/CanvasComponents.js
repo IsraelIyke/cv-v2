@@ -170,7 +170,7 @@ const DownloadImageComponent = () => {
               ) : (
                 ""
               )}
-              {experienceInfo[1] != undefined &&
+              {/* {experienceInfo[1] != undefined &&
               experienceInfo[1].role.length > 0 ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
@@ -192,8 +192,8 @@ const DownloadImageComponent = () => {
                 </>
               ) : (
                 ""
-              )}
-              {/* {experienceInfo[2] != undefined &&
+              )} */}
+              {experienceInfo[2] != undefined &&
               experienceInfo[2].role.length > 0 ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
@@ -215,7 +215,7 @@ const DownloadImageComponent = () => {
                 </>
               ) : (
                 ""
-              )} */}
+              )}
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 Skills
               </p>
