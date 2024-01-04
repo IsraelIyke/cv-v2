@@ -169,21 +169,6 @@ const DownloadImageComponent2 = () => {
                 ) : (
                   ""
                 )}
-                <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
-                  Skills
-                </p>
-                <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
-                  <p> {skills[0]}</p>
-                  <p> {skills[1]}</p>
-                  <p> {skills[2]}</p>
-                  <p> {skills[3]}</p>
-                  <p> {skills[4]}</p>
-                  <p> {skills[5]}</p>
-                  <p> {skills[6]}</p>
-                  <p> {skills[7]}</p>
-                  <p> {skills[8]}</p>
-                  <p> {skills[9]}</p>
-                </div>
               </div>
             </div>
 
@@ -227,6 +212,22 @@ const DownloadImageComponent2 = () => {
                 <p className="mb-[0.2rem]">YORUBA</p>
                 <p className="mb-[0.2rem]">ENGLISH</p>
                 <p className="mb-[0.2rem]">FRENCH</p>
+
+                <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
+                  Skills
+                </p>
+                <div className=" grid grid-cols-2 text-[0.56rem] uppercase mt-[0.4rem]">
+                  <p> {skills[0]}</p>
+                  <p> {skills[1]}</p>
+                  <p> {skills[2]}</p>
+                  <p> {skills[3]}</p>
+                  <p> {skills[4]}</p>
+                  <p> {skills[5]}</p>
+                  <p> {skills[6]}</p>
+                  <p> {skills[7]}</p>
+                  <p> {skills[8]}</p>
+                  <p> {skills[9]}</p>
+                </div>
               </div>
             </div>
           </div>
