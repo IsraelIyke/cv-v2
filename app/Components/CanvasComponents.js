@@ -147,8 +147,7 @@ const DownloadImageComponent = () => {
               <p className="text-[0.9rem] font-[800] uppercase mt-[1.2rem]">
                 PROJECTS/JOB EXPERIENCE
               </p>
-              {experienceInfo[0] != undefined &&
-              experienceInfo[0].role.length > 0 ? (
+              {experienceInfo[0] != undefined ? (
                 <>
                   <p className="uppercase mt-[0.2rem] flex justify-between items-end">
                     <p className="text-[0.7rem] font-[600]">
