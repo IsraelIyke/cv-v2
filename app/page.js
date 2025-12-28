@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CanvasComponent from "./Components/CanvasComponents";
 import Nav from "./Components/nav";
 import Image from "next/image";
 import Footer from "./Components/footer";
