@@ -1,4 +1,4 @@
-import DownloadImageComponent from "@/app/Components/CanvasComponents";
+import DownloadImageComponent from "@/app/Components/DownloadImageComponent";
 import Nav from "@/app/Components/nav";
 import Head from "next/head";
 
