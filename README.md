@@ -1,25 +1,28 @@
-# ugProject — Resume Builder
+# ugProject Resume Builder
 
 A fast, free **resume builder**. Fill in your details through a guided multi-step
-flow, pick a clean template, and download a recruiter-ready resume as a
-high-resolution PNG — all in the browser, with nothing leaving your device.
+flow, pick from a gallery of templates, and download a recruiter-ready resume,
+all in the browser, with nothing leaving your device.
 
 ---
 
 ## ✨ Features
 
-- **Guided builder** — a 6-step flow (personal info → education → experience →
-  contact → skills → template) with a live progress stepper.
-- **Global state + autosave** — all data lives in a single React Context
+- **Guided builder**: a 6-step flow (personal info, education, experience,
+  contact, skills, template) with a live progress stepper.
+- **Global state + autosave**: all data lives in a single React Context
   (`ResumeProvider`) and is persisted to `localStorage`, so progress survives
   page reloads and navigating between steps.
-- **Dynamic sections** — add/remove education and experience entries; add skills
+- **Dynamic sections**: add/remove education and experience entries; add skills
   and languages as tags.
-- **Two polished templates** — *Classic* (warm orange sidebar) and *Minimal*
-  (monochrome slate). Switch anytime without losing your data.
-- **One-click export** — render the resume to a crisp PNG via `html2canvas`.
+- **20 templates**: a data-driven system of layout engines (sidebar, banner,
+  single column) combined with color palettes, picked from a gallery menu.
+- **PDF export with selectable text**: printed through the browser via a hidden
+  iframe, so text stays selectable, searchable and ATS-friendly, and content
+  flows onto multiple A4 pages automatically.
+- **PNG export** for a quick image snapshot via `html2canvas`.
 - **Cookie/storage consent banner** that remembers the user's choice.
-- **Cohesive design system** — custom Tailwind theme (brand palette, typography,
+- **Cohesive design system**: custom Tailwind theme (brand palette, typography,
   shadows, motion) and reusable UI primitives.
 
 ---
@@ -30,6 +33,7 @@ high-resolution PNG — all in the browser, with nothing leaving your device.
 - React 18
 - Tailwind CSS 3
 - `html2canvas` for PNG export
+- Browser print pipeline for PDF export
 - `react-icons`
 
 ---
@@ -67,14 +71,15 @@ app/
     ResumeContext.js       Global resume state + localStorage persistence
   Components/
     nav, footer, Stepper, BuilderShell, CookieBanner
-    DownloadImageComponent(2), TemplateScaffold, TemplateControls
-    ResumeSection.js       Shared resume sidebar blocks
+    ResumeDocument.js      One renderer for every template (inline-styled, A4)
+    TemplateStudio.js      Gallery menu, live preview, PDF + PNG export
     ui/                    Field, TextArea, TagInput, Logo
   resume/
     layout.js              Wraps the builder in ResumeProvider
     steps.js               Single source of truth for the flow
+    templates.js           Palettes, layout engines, template registry
     personal-info | education | experience | contact | skills
-    template | template2   Template preview + export
+    template               Template gallery, preview and export
 ```
 
 ---

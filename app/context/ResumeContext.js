@@ -8,6 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { DEFAULT_TEMPLATE_ID } from "@/app/resume/templates";
 
 const STORAGE_KEY = "ugproject:resume";
 
@@ -50,6 +51,7 @@ const DEFAULT_DATA = {
   },
   skills: [],
   languages: [],
+  templateId: DEFAULT_TEMPLATE_ID,
   // Kept in memory only (base64 can exceed the localStorage quota).
   photo: null,
 };
@@ -139,7 +141,7 @@ export function ResumeProvider({ children }) {
         const { photo, ...persistable } = data;
         localStorage.setItem(STORAGE_KEY, JSON.stringify(persistable));
       } catch {
-        /* quota / private mode — fail silently */
+        /* quota / private mode: fail silently */
       }
     }, 300);
     return () => saveTimer.current && clearTimeout(saveTimer.current);

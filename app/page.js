@@ -14,7 +14,7 @@ function StepCard({ n, title, body }) {
   );
 }
 
-// A lightweight CSS mockup of a resume — no heavy images.
+// A lightweight CSS mockup of a resume (no heavy images).
 function ResumePreview() {
   return (
     <div className="relative mx-auto w-full max-w-sm">
@@ -72,7 +72,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
               <Link href="/resume/personal-info" className="btn-primary w-full sm:w-auto">
-                Start building — it’s free
+                Start building for free
               </Link>
               <Link href="/resume" className="btn-ghost w-full sm:w-auto">
                 How it works

@@ -98,3 +98,14 @@
     text-wrap: balance;
   }
 }
+
+/* Resume export: keep colors and avoid splitting entries across pages. */
+.resume-doc,
+.resume-sheet {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.resume-entry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}

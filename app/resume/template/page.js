@@ -1,7 +1,7 @@
-import DownloadImageComponent from "@/app/Components/DownloadImageComponent";
+import TemplateStudio from "@/app/Components/TemplateStudio";
 
-export const metadata = { title: "Classic template" };
+export const metadata = { title: "Choose a template" };
 
 export default function TemplatePage() {
-  return <DownloadImageComponent />;
+  return <TemplateStudio />;
 }

@@ -12,7 +12,7 @@ export default function CookieBanner() {
     try {
       if (!localStorage.getItem(CONSENT_KEY)) setVisible(true);
     } catch {
-      /* storage blocked — don't nag */
+      /* storage blocked: don't nag */
     }
   }, []);
 

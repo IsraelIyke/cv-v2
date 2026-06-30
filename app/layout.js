@@ -18,7 +18,7 @@ const sora = Sora({
 export const metadata = {
   metadataBase: new URL("https://ugproject.app"),
   title: {
-    default: "ugProject — Build a resume that gets you hired",
+    default: "ugProject: Build a resume that gets you hired",
     template: "%s · ugProject",
   },
   description:
@@ -26,7 +26,7 @@ export const metadata = {
   keywords: ["resume builder", "cv maker", "free resume", "ugProject"],
   authors: [{ name: "Israel Nwangwu" }],
   openGraph: {
-    title: "ugProject — Build a resume that gets you hired",
+    title: "ugProject: Build a resume that gets you hired",
     description:
       "Fill in your details, pick a clean template, and download a recruiter-ready resume in minutes.",
     type: "website",

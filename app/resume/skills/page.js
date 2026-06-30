@@ -21,7 +21,7 @@ export default function SkillsPage() {
         <TagInput
           items={data.skills}
           onChange={(skills) => setSection("skills", skills)}
-          placeholder="e.g. Figma — press Enter to add"
+          placeholder="e.g. Figma, then press Enter"
         />
         <p className="mt-1.5 text-xs text-ink-400">
           Press Enter or comma to add each skill.
@@ -33,7 +33,7 @@ export default function SkillsPage() {
         <TagInput
           items={data.languages}
           onChange={(languages) => setSection("languages", languages)}
-          placeholder="e.g. English — press Enter to add"
+          placeholder="e.g. English, then press Enter"
           max={10}
         />
       </div>

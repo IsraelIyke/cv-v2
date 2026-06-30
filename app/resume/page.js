@@ -21,8 +21,8 @@ export default function ResumeIntro() {
             Create your professional resume in minutes
           </h1>
           <p className="mt-4 text-ink-500">
-            Six quick steps. You can jump between them anytime — your progress is
-            saved automatically in your browser.
+            Six quick steps. You can jump between them anytime, and your progress
+            is saved automatically in your browser.
           </p>
           <Link
             href="/resume/personal-info"
