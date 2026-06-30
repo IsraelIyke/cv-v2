@@ -1,18 +1,7 @@
 import DownloadImageComponent2 from "@/app/Components/DownloadImageComponent2";
-import Nav from "@/app/Components/nav";
-import Head from "next/head";
 
-export default function Template() {
-  return (
-    <div className=" min-w-[1000px]">
-      <Head>
-        <meta name="viewport" content="width=1992px, initial-scale=1.0" />
-      </Head>
-      <Nav />
-      <div className=" pt-[9rem]"></div>
-      <div className=" flex justify-center">
-        <DownloadImageComponent2 />
-      </div>
-    </div>
-  );
+export const metadata = { title: "Minimal template" };
+
+export default function Template2Page() {
+  return <DownloadImageComponent2 />;
 }
