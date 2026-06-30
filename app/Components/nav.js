@@ -1,13 +1,23 @@
 import Link from "next/link";
+import Logo from "./ui/Logo";
 
 export default function Nav() {
   return (
-    <nav className=" fixed h-[5rem] w-screen border-b-2 border-[1px] flex justify-between items-center font-[600] backdrop-blur-sm z-10 ">
-      <Link href="/">
-        <h3 className=" pl-[1rem]">
-          ug<span className="text-[#FF5C00] -ml-1">Project</span>
-        </h3>
-      </Link>
+    <nav className="fixed inset-x-0 top-0 z-30 border-b border-ink-200/70 bg-ink-50/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <Logo />
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Link
+            href="/"
+            className="hidden text-sm font-medium text-ink-600 transition-colors hover:text-ink-900 sm:block"
+          >
+            Home
+          </Link>
+          <Link href="/resume/personal-info" className="btn-primary !py-2 !px-4 text-[0.8rem]">
+            Build resume
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }

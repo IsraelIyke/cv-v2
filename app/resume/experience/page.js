@@ -1,207 +1,123 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Nav from "@/app/Components/nav";
-import Footer from "@/app/Components/footer";
-import SideBar from "@/app/Components/sidebar";
 
-const ExperienceInfo = () => {
-  // Experience Information
-  const [experiences, setExperiences] = useState([
-    {
-      companyName: "",
-      role: "",
-      location: "",
-      start: "",
-      finish: "",
-      isCurrentlyWorking: false,
-      achievements: "",
-    },
-    {
-      companyName: "",
-      role: "",
-      location: "",
-      start: "",
-      finish: "",
-      isCurrentlyWorking: false,
-      achievements: "",
-    },
-    {
-      companyName: "",
-      role: "",
-      location: "",
-      start: "",
-      finish: "",
-      isCurrentlyWorking: false,
-      achievements: "",
-    },
-  ]);
+import BuilderShell from "@/app/Components/BuilderShell";
+import Field from "@/app/Components/ui/Field";
+import TextArea from "@/app/Components/ui/TextArea";
+import {
+  useResume,
+  EMPTY_EXPERIENCE,
+} from "@/app/context/ResumeContext";
 
-  // Fetch data from localStorage on component mount
-  useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem("experienceInfo")) || {};
-    setExperiences(storedData.experiences || [...experiences]);
-  }, []);
+export default function ExperiencePage() {
+  const { data, updateListItem, addListItem, removeListItem } = useResume();
+  const experience = data.experience;
 
-  // Update localStorage when "Next" or "Prev" button is clicked
-  const handleButtonClick = () => {
-    const experienceInfo = { experiences };
-    localStorage.setItem("experienceInfo", JSON.stringify(experienceInfo));
-  };
+  const set = (index, field) => (e) =>
+    updateListItem("experience", index, { [field]: e.target.value });
 
-  // Update finish date based on checkbox
-  const handleCheckboxChange = (index, e) => {
-    const updatedExperiences = [...experiences];
-    updatedExperiences[index].isCurrentlyWorking = e.target.checked;
-    updatedExperiences[index].finish = e.target.checked ? "Present" : "";
-    setExperiences(updatedExperiences);
-  };
-
-  // Update other input fields
-  const handleInputChange = (index, field, value) => {
-    const updatedExperiences = [...experiences];
-    updatedExperiences[index][field] = value;
-    setExperiences(updatedExperiences);
-  };
+  const toggleCurrent = (index) => (e) =>
+    updateListItem("experience", index, {
+      isCurrentlyWorking: e.target.checked,
+      finish: e.target.checked ? "Present" : "",
+    });
 
   return (
-    <div>
-      <Nav />
-      <div className=" pt-[6rem]"></div>
-      <div className="relative flex flex-col md:flex-row py-[0rem] md:py-[2rem] px-[0.5rem] md:px-[10rem]">
-        <SideBar />
-        <div className="w-[95vw] md:w-[65vw] max-h-fit min-h-[70vh] shadow-xl ml-[0rem] md:ml-[1rem] rounded-[16px] px-[0.5rem] md:px-[3rem] pt-[2rem]">
-          <div>
-            <h3 className="mb-[1rem] font-[600]">Experience Information</h3>
+    <BuilderShell
+      step="experience"
+      title="Work experience"
+      description="List your most relevant roles, most recent first."
+      prevHref="/resume/education"
+      nextHref="/resume/contact"
+    >
+      {experience.map((exp, index) => (
+        <div
+          key={index}
+          className="rounded-2xl border border-ink-200 bg-ink-50/60 p-5"
+        >
+          <div className="mb-4 flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-ink-700">
+              Experience {index + 1}
+            </h3>
+            {experience.length > 1 && (
+              <button
+                type="button"
+                onClick={() => removeListItem("experience", index)}
+                className="text-xs font-medium text-ink-400 transition-colors hover:text-brand-600"
+              >
+                Remove
+              </button>
+            )}
           </div>
 
-          {experiences.map((experience, index) => (
-            <div key={index} className="flex flex-col mb-[2rem]">
-              <h4 className="mb-[0.6rem]">Experience {index + 1}</h4>
-              <div className="flex flex-col md:flex-row justify-between">
-                <div className="flex flex-col mb-[0rem]">
-                  <label className="text-[0.9rem] font-[600]">
-                    Company Name
-                  </label>
-                  <input
-                    className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
-                    type="text"
-                    placeholder="Company Name"
-                    value={experience.companyName}
-                    onChange={(e) =>
-                      handleInputChange(index, "companyName", e.target.value)
-                    }
-                  />
-                </div>
-                <div className="flex flex-col mb-[0rem]">
-                  <label className="text-[0.9rem] font-[600]">Role</label>
-                  <input
-                    className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
-                    type="text"
-                    placeholder="Role"
-                    value={experience.role}
-                    onChange={(e) =>
-                      handleInputChange(index, "role", e.target.value)
-                    }
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row  justify-between">
-                <div className="flex flex-col mb-[0rem]">
-                  <label className="text-[0.9rem] font-[600]">Location</label>
-                  <input
-                    className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] md:w-[14rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
-                    type="text"
-                    placeholder="Location"
-                    value={experience.location}
-                    onChange={(e) =>
-                      handleInputChange(index, "location", e.target.value)
-                    }
-                  />
-                </div>
-                <div className="flex justify-between">
-                  <div className="flex flex-col mb-[0rem]">
-                    <label className="text-[0.9rem] font-[600]">
-                      Start Date
-                    </label>
-                    <input
-                      className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[7rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
-                      type="text"
-                      placeholder="Start Date"
-                      value={experience.start}
-                      onChange={(e) =>
-                        handleInputChange(index, "start", e.target.value)
-                      }
-                    />
-                  </div>
-                  <div className="flex flex-col mb-[0rem]">
-                    <label className="text-[0.9rem] font-[600]">
-                      Finish Date
-                    </label>
-                    <input
-                      className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[7rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
-                      type="text"
-                      placeholder="Finish Date"
-                      value={experience.finish}
-                      onChange={(e) =>
-                        handleInputChange(index, "finish", e.target.value)
-                      }
-                      disabled={experience.isCurrentlyWorking}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center mb-[1rem]">
-                <input
-                  type="checkbox"
-                  id={`currentlyWorking${index}`}
-                  checked={experience.isCurrentlyWorking}
-                  onChange={(e) => handleCheckboxChange(index, e)}
-                />
-                <label
-                  htmlFor={`currentlyWorking${index}`}
-                  className="ml-[0.5rem] text-[0.9rem]"
-                >
-                  Currently Working
-                </label>
-              </div>
-              <div className="flex flex-col mb-[1rem]">
-                <label className="text-[0.9rem] font-[600]">Achievements</label>
-                <textarea
-                  className="bg-[#F0F0F0] border-[#B1B1B1] border-[1px] py-[0.3rem] px-[0.2rem] w-[100%] h-[5rem] mb-[1rem] rounded-[0.2rem] text-[0.9rem]"
-                  placeholder="Achievements"
-                  value={experience.achievements}
-                  onChange={(e) =>
-                    handleInputChange(index, "achievements", e.target.value)
-                  }
-                />
-              </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <Field
+              label="Company"
+              placeholder="Acme Inc."
+              value={exp.companyName}
+              onChange={set(index, "companyName")}
+            />
+            <Field
+              label="Role"
+              placeholder="Senior Engineer"
+              value={exp.role}
+              onChange={set(index, "role")}
+            />
+            <Field
+              label="Location"
+              placeholder="Remote · New York, NY"
+              value={exp.location}
+              onChange={set(index, "location")}
+            />
+            <div className="grid grid-cols-2 gap-4">
+              <Field
+                label="Start"
+                placeholder="Jan 2021"
+                value={exp.start}
+                onChange={set(index, "start")}
+              />
+              <Field
+                label="Finish"
+                placeholder="Present"
+                value={exp.finish}
+                onChange={set(index, "finish")}
+                disabled={exp.isCurrentlyWorking}
+              />
             </div>
-          ))}
+          </div>
 
-          <div className="flex justify-between">
-            <Link href="/resume/education">
-              <button
-                className=" bg-[#FF5C00] hover:bg-orange-800 py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mb-[1rem]"
-                onClick={handleButtonClick}
-              >
-                Prev
-              </button>
-            </Link>
-            <Link href="/resume/contact">
-              <button
-                className=" bg-[#FF5C00] hover:bg-orange-800 py-[0.5rem] px-[2rem] text-[white] rounded-[1rem] mb-[1rem]"
-                onClick={handleButtonClick}
-              >
-                Next
-              </button>
-            </Link>
+          <label className="mt-4 inline-flex cursor-pointer select-none items-center gap-2 text-sm text-ink-600">
+            <input
+              type="checkbox"
+              checked={exp.isCurrentlyWorking}
+              onChange={toggleCurrent(index)}
+              className="h-4 w-4 rounded border-ink-300 text-brand-600 focus:ring-brand-500/30"
+            />
+            I currently work here
+          </label>
+
+          <div className="mt-4">
+            <TextArea
+              label="Achievements"
+              hint="Use action verbs and quantify impact where you can."
+              rows={4}
+              placeholder="Led a team of 4 to ship… increasing conversion by 18%"
+              value={exp.achievements}
+              onChange={set(index, "achievements")}
+            />
           </div>
         </div>
-      </div>
-      {/* <Footer /> */}
-    </div>
-  );
-};
+      ))}
 
-export default ExperienceInfo;
+      <button
+        type="button"
+        onClick={() => addListItem("experience", { ...EMPTY_EXPERIENCE })}
+        className="btn-soft w-full"
+      >
+        <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+          <path d="M10 4a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H5a1 1 0 1 1 0-2h4V5a1 1 0 0 1 1-1Z" />
+        </svg>
+        Add another role
+      </button>
+    </BuilderShell>
+  );
+}
